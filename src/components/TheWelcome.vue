@@ -8,8 +8,8 @@ import SupportIcon from './icons/IconSupport.vue'
 </script>
 
 <template>
-  <div class="m-4">
-    <div class="flex justify-center items-center text-[30px]">Seven Peaks Software</div>
+  <div class="m-4 text-zinc-950">
+    <div class="flex justify-center items-center text-[30px] text-zinc-950">Seven Peaks Software</div>
     <WelcomeItem>
       <template #icon>
         <DocumentationIcon />
