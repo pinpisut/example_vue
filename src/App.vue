@@ -4,13 +4,13 @@ import TopBar from './components/TopBar.vue';
 import SideMenu from './components/SideMenu.vue';
 import { ref, watch, onMounted } from 'vue';
 
-const topBar = ref(null);
+const topBar = ref<InstanceType<typeof TopBar>>();
 const childShow = ref(true);
 
 onMounted(() => {
-  console.log('topbar value show >>> ', topBar.value.show);
-  console.log(topBar.value.show);
-  childShow.value = topBar.value.show;
+  // console.log('topbar value show >>> ', topBar.value.show);
+  // console.log(topBar.value.show);
+  childShow.value = (topBar.value as any)?.show || true;
 })
 
 watch(childShow, (newVal, oldVal) => {

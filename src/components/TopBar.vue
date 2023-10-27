@@ -82,12 +82,12 @@ import { ref, reactive, watch, h } from 'vue'
     lang.openKeys = lang.hasShown ? [] : lang.preOpenKeys;
   };
 
-  const handleUsingLang = ({ item, key, keyPath }) => {
+  const handleUsingLang = ({ item, key, keyPath }: { item: any, key: any, keyPath: any}) => {
     lang.selectedKeys = key;
     lang.hasShown = !lang.hasShown;
   };
 
-  const handleCloseAvatar = ({ item, key, keyPath }) => {
+  const handleCloseAvatar = ({ item, key, keyPath }: { item: any, key: any, keyPath: any}) => {
     state.selectedKeys = key;
     state.hasShown = !state.hasShown;
   };

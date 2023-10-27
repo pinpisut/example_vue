@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { reactive, watch } from 'vue';
 import { useRouter } from 'vue-router'
-import { SideMenuProps } from '../types';
+import type { SideMenuProps } from '../types';
 import { sideMenuData } from '../constants/sideMenu';
 
 const items: SideMenuProps[] = reactive(sideMenuData);
@@ -24,7 +24,7 @@ const toggleCollapsed = () => {
   state.openKeys = state.collapsed ? [] : state.preOpenKeys;
 };
 
-const handleMenu = ({ item, key, keyPath }) => {
+const handleMenu = ({ item, key, keyPath }: { item: any, key: any, keyPath: any}) => {
   if (item.link) {
     router.push({ name: item.link })
   }
