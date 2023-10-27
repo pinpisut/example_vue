@@ -26,7 +26,7 @@ const handleTransition = (show: boolean) => {
 </script>
 
 <template>
-  <a-layout class="w-[100vw] bg-red-600">
+  <a-layout class="w-[100vw] bg-white">
     <TopBar class="z-10" ref="topBar" @transition="handleTransition" />
     <a-layout>
       <transition name="slide">
@@ -50,8 +50,8 @@ const handleTransition = (show: boolean) => {
 
   .slide-enter,
   .slide-leave-to {
-      transform: translateX(-100%);
-      transition: all 150ms ease-in 0s
+      transform: translateX(-1%);
+      transition: all 20ms ease-in 0s
   }
 
   .side-container {
